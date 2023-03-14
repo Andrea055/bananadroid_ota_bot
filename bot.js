@@ -86,6 +86,9 @@ async function main() {
         const chatId = msg.chat.id;
         if (msg.text == "/upload")
             bot.sendMessage(chatId, "Usage: /upload device_name download_url changelog_device");
+        else if(msg.text == "/set_device_photo"){
+            bot.sendMessage(chatId, "Usage: /set_device_photo device_name photo_url(must be PNG)")
+        }
     });
 }
 
