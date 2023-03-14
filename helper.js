@@ -7,14 +7,13 @@ export function token() {
     return parsed.token;
 }
 
-export function gen_json(filename, download, changelog_device, photo) {
+export function gen_json(filename, download, changelog_device) {
     let version = download.split("/")[download.split("/").length - 2].split(".")[0];
     return {
         file: filename,
         download_url: download,
         "changelog_device": changelog_device,
         "version": version,
-        "photo": photo
     }
 }
 
