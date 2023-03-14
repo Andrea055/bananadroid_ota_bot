@@ -59,7 +59,7 @@ async function main() {
             bot.sendMessage(chatId, "Usage: /set_device_photo device_name photo_url");
         } else {
             try {
-                if(photo.split("/")[photo.split("/").length - 1].split(".")[1] == "png"){
+                if(photo.split("/")[photo.split("/").length - 1].split(".")[photo.split("/")[photo.split("/").length - 1].split(".").length - 1] == "png"){
                     const file = fs.createWriteStream("bananadroid_devices/photos/" + device + ".png");
                     const request = https.get(photo, function (response) {
                         response.pipe(file);
