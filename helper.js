@@ -1,6 +1,8 @@
 import fs from 'fs';
 import { exec } from 'child_process';
 
+export const admin = ["Andreock", "travarilo"];
+
 export function token() {
     const file_raw = fs.readFileSync("config.json", "utf8" );
     const parsed = JSON.parse( file_raw );
